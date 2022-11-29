@@ -1,0 +1,22 @@
+.row{
+    display: flex;
+    margin: 0 !important;
+    padding: 50px  !important;
+    background-color:#6c757d;
+    width: 100%;  
+    text-align: center;
+    color: white;
+}
+.ListGroup{
+  background-color:#6c757d;
+}
+.nav-link:hover{
+  
+  color: rgb(156, 151, 151);
+  border: 1px solid 30px;
+  text-decoration: underline;
+}
+.col-4{
+  text-align: left;
+}
+
