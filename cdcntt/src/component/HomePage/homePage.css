@@ -1,0 +1,43 @@
+.HomePage {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #fceecd;
+}
+
+.HomePageTop::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.imgHomePageTop {
+  float: right;
+  width: 40%;
+  margin-left: 50px;
+  border-radius: 0;
+}
+h1 {
+  text-align: center;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+.PTop {
+  text-align: center;
+  margin: 20px 50px 0;
+}
+.d-flex {
+  text-align: center;
+  margin: 20px 150px 0;
+}
+.btn_search {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.me-2 {
+  width: 500px;
+  border-radius: 30px;
+}
+#RowListHomePage{
+  background-color: #f0ede9;
+
+}
