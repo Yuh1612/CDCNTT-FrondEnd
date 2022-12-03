@@ -29,6 +29,10 @@ function HeaderPage() {
             <NavLink to="login" className='nav-link ' id='login'> Log in
             </NavLink>
           </Button>
+          <Button className='btn' variant="outline-primary">
+            <NavLink to="infoGV" className='nav-link ' id='login'> Info Giang vien
+            </NavLink>
+          </Button>
         </Nav>
       </Navbar.Collapse>
     </Container>

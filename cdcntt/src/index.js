@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './component/HomePage';
 import LogIn from './component/Login';
 import SignUp from './component/SignUp';
+import InfoGV from './component/InfoGV'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ root.render(
           <Route index element={<HomePage />} />
           <Route path='login' element={<LogIn />} />
           <Route path='signup' element={<SignUp />} />
+          <Route path='infoGV' element={<InfoGV />} />
         </Route>
       </Routes>
 
