@@ -1,86 +1,82 @@
 .container {
-    margin-top: 8%;
-    margin-bottom: 3%;
-    margin-left: 13%;
+  margin-top: 8%;
+  margin-bottom: 3%;
+  margin-left: 13%;
 }
 
 .img {
-    margin-right: 3%;
+  margin-right: 3%;
 }
 
 h2 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 h3 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .container2 {
-    margin-left: 13%;
-    margin-right: 13%;
-    margin-bottom: 2%;
-    background-color: white;
-    padding: 2%;
-    border-radius: 50px;
-    -moz-box-shadow: inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow: inset 0 0 10px #000000;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-bottom: 2%;
+  background-color: white;
+  padding: 2%;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
 }
 
 .containerReview {
-    margin-left: 13%;
-    margin-right: 13%;
-    margin-bottom: 2%;
-    background-color: white;
-    padding: 2%;
-    border-radius: 50px;
-    height: 500px;
-    -moz-box-shadow: inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow: inset 0 0 10px #000000;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-bottom: 2%;
+  background-color: white;
+  padding: 2%;
+  border-radius: 50px;
+  height: 500px;
+  -moz-box-shadow: inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow: inset 0 0 10px #000000;
 }
 
 .backgrond {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: rgb(237, 239, 240);
-    height: auto;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(237, 239, 240);
+  height: auto;
 }
 
 .divProfile {
-    margin-right: 12%;
-    margin-top: 8%;
+  margin-right: 12%;
+  margin-top: 8%;
 }
 
 .test {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .textProfile {
-    font-size: large;
-}
-
-.btn {
-    margin-top: 5%;
+  font-size: large;
 }
 
 .review {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: row;
-}  
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+}
 
 .textRating {
-    color: rgb(253, 196, 37);
+  color: rgb(253, 196, 37);
 }
 
 .textDateRating {
-    color: darkgrey;
-    font-weight: 400;
+  color: darkgrey;
+  font-weight: 400;
 }
 
 .textReview {
-    font-weight: 400;
+  font-weight: 400;
 }
