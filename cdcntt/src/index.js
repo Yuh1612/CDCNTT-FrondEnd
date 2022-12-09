@@ -6,8 +6,22 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />}>
+          <Route index element={<HomePage />} />
+          <Route path='login' element={<LogIn />} />
+          <Route path='signup' element={<SignUp />} />
+          <Route path='userprofile' element={<UserProfile />} />
+          <Route path='savedteacher' element={<SavedTeacher />} />
+          <Route path='teacherprofile' element={<TeacherProfile/>}/>
+        </Route>
+      </Routes>
+
+    </BrowserRouter>
+<App/>
   </React.StrictMode>
 );
 

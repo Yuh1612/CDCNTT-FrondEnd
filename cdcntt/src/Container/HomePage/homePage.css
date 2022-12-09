@@ -1,0 +1,125 @@
+.HomePage {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #fceecd;
+}
+
+.HomePageTop::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.imgHomePageTop {
+  float: right;
+  width: 40%;
+  margin-left: 50px;
+  border-radius: 0;
+  margin-top: 4px;
+}
+h1 {
+  text-align: center;
+  margin: auto ;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+}
+.PTop {
+  text-align: center;
+  margin: 10px 50px 0;
+}
+.d-flex {
+  text-align: center;
+  margin: 20px 150px 0;
+}
+
+.btn_search {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top:0 !important
+}
+.me-2 {
+  width: 500px;
+  border-radius: 30px;
+  height: 40px;
+}
+#RowListHomePage{
+  background-color: #f1efed;
+
+}
+
+#RowListHomePage span{
+color: black;
+}
+.styles_BottomDivider__IQbGQ{
+  border-top: 1px solid rgb(212, 209, 209);
+background-color: #f1efed !important; 
+   width: 70%;
+    margin: auto;
+}
+#TopTeacher{
+  background-color: #f1efed;
+  color: black;
+  padding-top:0 !important
+}
+#TopTeacher> span{
+margin:30px auto 10px !important;
+color: black !important;
+}
+#TopTeacher .col-8{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: 20px;
+  text-align: center;
+}
+#Pricetable{
+  background-color:#f1efed ;
+  
+}
+#Pricetableh3{
+  margin-bottom: 50px;
+}
+#Pricetable .col-6{
+padding: 40px;
+background-color: white;
+border-radius: 30px;
+margin-left: 50px;
+width: 45%;
+flex-direction: column;
+display: flex;
+justify-content: left;
+}
+#PriceTable > p{
+text-align: left;
+}
+#PriceTable > span,p,h3{
+  color: black !important;
+
+}
+
+.TablePrice{
+ 
+    width: 100%;
+    height: auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+    background-color: rgb(232, 230, 230);
+    justify-items: center;
+    text-align: center;
+}
+ table,th, td {
+  border-radius: 10px;
+}
+#DiscoverMore{
+  justify-content: end;
+    color: #006987;
+    text-align: center;
+}
+caption{
+  text-align: center;
+}
+.IconTeacher,.IconUser{
+  display: block;
+  margin: 0 auto;
+  font-size: 100px;
+}
