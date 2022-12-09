@@ -31,7 +31,7 @@ function App() {
             <SignUp />
           </Route>
         </main>
-        <FooterPage /> */}
+         */}<FooterPage />
       {/* </Routes>
     </BrowserRouter> */}
     </div>

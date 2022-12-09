@@ -3,7 +3,6 @@ import { FormGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './index.css';
-
 export default function UserProfile() {
     return (
         <div className="UserProfile">

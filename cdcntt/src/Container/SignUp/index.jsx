@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css';
+
 function SignUp() {
     return (
         <div className='row' id="Signup-form-container" >

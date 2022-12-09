@@ -2,9 +2,7 @@ import React from "react";
 import {  NavLink } from 'react-router-dom';
 import { FormGroup } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-
 import './index.css';
-
 function LogIn() {
     return (
         <div className='row' id="Login-form-container">
