@@ -1,0 +1,62 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+Nav{
+    max-height: '100px' 
+}
+.Navbar{
+    padding: 20px;
+}
+.btn{
+    padding: 0 10px 0;
+    height: 40px;
+    margin: 0 5px 0 ;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+}
+#signup:hover,#login:hover{
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.UserImage{
+    float: center;
+    width: 30%;
+}
+
+.NavDropDown{
+    position: relative;
+    margin-right:0
+}
+.dropdown-menu.show.dropdown-menu-light
+{
+    left: -100px;
+    border: none
+}
+svg{
+    margin: 5px;
+}
+.IconNotification {
+    margin:  10px ;
+    font-size: 150%;
+
+}
+.DropDownNotificaion{
+    display: none;
+}
+.IconNotification:hover .DropDownNotificaion{
+    display: block;
+    border: none;
+    position: relative;
+    margin-right:0;
+    left: -100px;
+}
+#NavMultipleDropDownNotification{
+    padding-top: 15px ;
+}

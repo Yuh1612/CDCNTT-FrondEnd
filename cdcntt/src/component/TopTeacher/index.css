@@ -1,0 +1,49 @@
+.TopTeacher{
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    border: 0;
+    margin: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 30px;
+    color: black !important;
+}
+.TopTeacher:hover{
+    border:1px solid rgb(54, 214, 228)  ;
+    
+}
+.TopTeacher img{
+    /* width: 120%; */
+    width: 200px;
+    height: 200px;
+}
+.TopTeacher h6{
+    margin: 20px auto;
+}
+
+.TopTeacher span{
+    color: #3bb3bd;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 10px auto;
+}
+.TopTeacher span:hover{
+   color: rgb(54, 214, 228) ;
+   text-decoration: underline;
+}
+
+.Star{
+    fill: #fdc425;
+}
+.Introduction{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
