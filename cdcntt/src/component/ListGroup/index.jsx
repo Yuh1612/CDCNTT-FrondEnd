@@ -27,12 +27,18 @@ function ListTeacher() {
           </div>
           <div className="col-3">
             <Button>
-              <NavLink to="/" className="nav-link  ">
+              <NavLink to="teacherprofile" className="nav-link  ">
                 {" "}
                 View full details
               </NavLink>
             </Button>
             {/* <Button>Hire me</Button> */}
+            <Button>
+              <NavLink to="/" className="nav-link  ">
+                {" "}
+                Hire me
+              </NavLink>
+            </Button>
             <Button>
               <NavLink to="/" className="nav-link  ">
                 {" "}
