@@ -1,5 +1,7 @@
-import {AiFillStar } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import './index.css'
+import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
 export default function TopTeacher() {
     return (
         <>
@@ -11,9 +13,14 @@ export default function TopTeacher() {
                     <p>5</p>
                 </div>
                 <p>Speak: English(native)</p>
-                <span class="styles_link__qR927">View full profile</span>
+                <Button>
+                    <NavLink to="teacherprofile" className="nav-link  ">
+                        {" "}
+                        View full details
+                    </NavLink>
+                </Button>
             </div>
-            
+
             <div className="TopTeacher">
                 <img src="https://avatars.preply.com/i/logos/i/logos/avatar_6eqrpib4gdu.jpg?d=160x160&f=webp" alt="TopTeacherImg" className="TopTeacherImg" />
                 <h6>Kinneret E</h6>
@@ -22,7 +29,12 @@ export default function TopTeacher() {
                     <p>5</p>
                 </div>
                 <p>Speak: English(native)</p>
-                <span class="styles_link__qR927">View full profile</span>
+                <Button>
+                    <NavLink to="teacherprofile" className="nav-link  ">
+                        {" "}
+                        View full details
+                    </NavLink>
+                </Button>
             </div>
 
             <div className="TopTeacher">
@@ -33,7 +45,12 @@ export default function TopTeacher() {
                     <p>5</p>
                 </div>
                 <p>Speak: Vietnamese, English</p>
-                <span class="styles_link__qR927">View full profile</span>
+                <Button>
+                    <NavLink to="teacherprofile" className="nav-link  ">
+                        {" "}
+                        View full details
+                    </NavLink>
+                </Button>
             </div>
         </>
 
