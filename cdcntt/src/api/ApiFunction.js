@@ -22,19 +22,19 @@ const api = {
     address,
     experience,
     degree,
-    cerfiticate
+    certificate
   ) {
     return await apiConfig.post("/teacher", {
       username: username,
       password: password,
       firstname: firstname,
       lastname: lastname,
-      photo: photo,
       phone: phone,
+      photo: photo,
       address: address,
       experience: experience,
       degree: degree,
-      cerfiticate: cerfiticate,
+      certificate: certificate,
     });
   },
   async createStudent(username, password, firstname, lastname, phone) {
