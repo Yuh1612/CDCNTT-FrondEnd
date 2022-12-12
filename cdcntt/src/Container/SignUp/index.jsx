@@ -30,8 +30,8 @@ function SignUp() {
     console.log(certificate);
 
     if (role === "teacherRole") {
-        console.log(role)
-     await api.createTeacher(
+      console.log(role);
+      await api.createTeacher(
         username,
         password,
         firstname,
@@ -44,9 +44,9 @@ function SignUp() {
         certificate
       );
     } else {
-        console.log(role)
+      console.log(role);
 
-        await api.createStudent(username, password, firstname, lastname, phone);
+      await api.createStudent(username, password, firstname, lastname, phone);
     }
   };
 
