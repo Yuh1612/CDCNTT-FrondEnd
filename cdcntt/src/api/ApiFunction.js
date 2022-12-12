@@ -1,9 +1,9 @@
-import orderConfig from "./orderConfig";
+import apiConfig from "./ApiConfig";
 
-const orderApi = {
-  async getProvinces() {
-    return await orderConfig.get("/provinces/");
+const api = {
+  async getRaiting() {
+    return await apiConfig.get("/raitings");
   },
 };
 
-export default orderApi;
+export default api;
