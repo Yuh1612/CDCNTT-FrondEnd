@@ -1,7 +1,7 @@
 import apiConfig from "./ApiConfig";
 
 const api = {
-  async getRaiting() {
+  async getRaitings() {
     return await apiConfig.get("/raitings");
   },
 };
