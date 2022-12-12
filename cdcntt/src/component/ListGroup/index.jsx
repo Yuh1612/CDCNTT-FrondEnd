@@ -1,16 +1,19 @@
 import { Button } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./index.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 function ListTeacher() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <ListGroup as="ul" id="ListGroupTeacher">
       <ListGroup.Item as="li">
         <div className="row" id="RowListGroupItem">
           <div className="col-3">
-            <img src="https://avatars.preply.com/i/logos/i/logos/avatar_o3nwt6e7s68.jpg?d=160x160&f=webp"></img>
+            <img
+              alt=""
+              src="https://avatars.preply.com/i/logos/i/logos/avatar_o3nwt6e7s68.jpg?d=160x160&f=webp"
+            ></img>
           </div>
           <div className="col-6">
             <h4> Kathryn L</h4>
