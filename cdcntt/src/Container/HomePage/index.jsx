@@ -1,11 +1,26 @@
 import React from "react";
-
+import { useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { FcBusinesswoman, FcReading } from "react-icons/fc";
+import api from "../../api/ApiFunction";
 import ListTeacher from "../../component/ListGroup";
 import TopTeacher from "../../component/TopTeacher";
 import "./homePage.css";
 function HomePage() {
+  const [teachers, setTeachers] = useState([]);
+  const [availableTeachers, setAvailableTeachers] = useState([]);
+  useEffect(() => {
+    const getTeachers = async () => {
+      const res = await api.getTeachers();
+      setTeachers(res.data);
+      if (res.data.length > 3) {
+        setAvailableTeachers(res.data.slice(0, 3));
+        return;
+      }
+      setAvailableTeachers(res.data);
+    };
+    getTeachers();
+  }, []);
   return (
     <div className="HomePage">
       <div className="HomePageTop">
@@ -38,12 +53,12 @@ function HomePage() {
       </div>
       <div className="row" id="RowListHomePage">
         <span>
-          <h3>English Teacher Available </h3>
+          <h3>English Teacher Available</h3>
         </span>
 
         <div className="col-2"></div>
         <div className="col-8">
-          <ListTeacher />
+          <ListTeacher availableTeachers={availableTeachers} />
         </div>
         <div className="col-2"></div>
       </div>
