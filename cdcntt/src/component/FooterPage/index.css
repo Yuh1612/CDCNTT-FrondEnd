@@ -1,22 +1,26 @@
-.row{
-    display: flex;
-    margin: 0 !important;
-    padding: 50px  !important;
-    background-color:#6c757d;
-    width: 100%;  
-    text-align: center;
-    color: white;
+.row {
+  display: flex;
+  margin: 0 !important;
+  padding: 50px !important;
+  background-color: #6c757d;
+  width: 100%;
+  text-align: center;
+  color: white !important;
 }
-.ListGroup{
-  background-color:#6c757d;
+.ListGroup {
+  background-color: #6c757d;
 }
-.nav-link:hover{
-  
+.nav-link:hover {
   color: rgb(156, 151, 151);
   border: 1px solid 30px;
   text-decoration: underline;
 }
-.col-4{
+.col-4 {
   text-align: left;
 }
-
+svg {
+  margin: 5px;
+}
+.row .col-4 {
+  padding-left: 50px;
+}

@@ -9,9 +9,8 @@ function HomePage() {
       <div className="HomePageTop">
         <img
           className="imgHomePageTop"
-          alt=""
           src="https://static.preply.com/static/ssr/_next/static/images/pre-search-bg-image-0f1c58a027ed60d0afd5da3a263677fd.jpg"
-        />
+        ></img>
         <h1>Online English tutorials and teachers? </h1>
         <p className="PTop">
           Looking for an online English tutor? Preply is the leading online
@@ -25,11 +24,11 @@ function HomePage() {
         <Form className="d-flex">
           <Form.Control
             type="search"
-            placeholder="Name ..."
+            placeholder="Search"
             className="me-2"
             aria-label="Search"
           />
-          <Button className="btn_search" variant="success">
+          <Button className="btn_search" variant="outline-success">
             Search
           </Button>
         </Form>

@@ -1,0 +1,77 @@
+.UserProfile {
+  margin-top: 80px;
+  width: 100%;
+  height: auto;
+}
+#RowUserProfile {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #f0ede9;
+}
+.col-3 .list-group {
+  margin-top: 20%;
+}
+.list-group-item.list-group-item-action {
+  background-color: #f0ede9;
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  /* text-align: left; */
+}
+.list-group-item.list-group-item-action:hover {
+  background-color: #b8b7b5;
+  color: rgb(99, 96, 96);
+  border: none;
+}
+
+.UserAccountForm {
+  background-color: white;
+  color: black;
+  text-align: left;
+  /* padding-left: 10%; */
+  /* padding-right: 10%; */
+  padding: 5%;
+  border-radius: 30px;
+}
+
+#Genderradiobutton {
+  margin-top: 16px;
+  margin-bottom: 8px !important;
+}
+#Genderradiobutton label {
+  margin-right: 16px;
+}
+.md-3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#FormButtonUser {
+  /* display: flex;
+    flex-direction: row; */
+  display: block;
+  /* flex-flow: row; */
+  margin-left: 30% !important;
+  margin-right: auto !important;
+}
+#FormButtonUser > button {
+  border-radius: 10px;
+  margin-right: 10%;
+}
+#FormUserImg {
+  padding: 10px 0 !important;
+  background-color: white;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 30%;
+}
+#FormUserImg > button {
+  margin-top: 20px;
+  width: 70%;
+  border-radius: 10px;
+  border: 1px solid;
+}
+#FormUserImg > button:hover {
+  color: rgb(6, 109, 28);
+  border: 1px solid rgb(6, 109, 28);
+}
