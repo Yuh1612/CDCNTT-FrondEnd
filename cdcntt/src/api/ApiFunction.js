@@ -24,7 +24,7 @@ const api = {
     degree,
     certificate
   ) {
-    return await apiConfig.post("/teacher", {
+    return await apiConfig.post("/teachers", {
       username: username,
       password: password,
       firstname: firstname,

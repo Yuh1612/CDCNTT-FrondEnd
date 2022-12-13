@@ -12,26 +12,15 @@ function SignUp() {
     let password = e.target.password.value || "";
     let firstname = e.target.firstName.value || "";
     let lastname = e.target.lastName.value || "";
-    let photo = e.target.photo.value || "";
-    let phone = e.target.phone.value || "";
-    let address = e.target.address.value || "";
-    let experience = e.target.experience.value || "";
-    let degree = e.target.degree.value || "";
-    let certificate = e.target.certificate.value || "";
-
-    console.log(username);
-    console.log(password);
-    console.log(firstname);
-    console.log(lastname);
-    console.log(photo);
-    console.log(phone);
-    console.log(address);
-    console.log(experience);
-    console.log(certificate);
 
     if (role === "teacherRole") {
-        console.log(role)
-     await api.createTeacher(
+      let photo = e.target.photo.value || "";
+      let phone = e.target.phone.value || "";
+      let address = e.target.address.value || "";
+      let experience = e.target.experience.value || "";
+      let degree = e.target.degree.value || "";
+      let certificate = e.target.certificate.value || "";
+      await api.createTeacher(
         username,
         password,
         firstname,
@@ -44,9 +33,9 @@ function SignUp() {
         certificate
       );
     } else {
-        console.log(role)
+      console.log(role);
 
-        await api.createStudent(username, password, firstname, lastname, phone);
+      await api.createStudent(username, password, firstname, lastname, phone);
     }
   };
 
