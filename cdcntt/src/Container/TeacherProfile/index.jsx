@@ -48,11 +48,7 @@ function TeacherProfile() {
     <div>
       <div className="test">
         <div className="container">
-          <Image
-            src="https://avatars.preply.com/i/logos/i/logos/avatar_o3nwt6e7s68.jpg?d=160x160&f=webp"
-            className="img"
-            width={220}
-          ></Image>
+          <Image src={teacher.photo} className="img" width={220}></Image>
           <h2>
             {teacher.lastName} {teacher.firstName}
           </h2>
