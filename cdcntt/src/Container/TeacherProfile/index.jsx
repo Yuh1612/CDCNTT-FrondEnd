@@ -6,16 +6,16 @@ import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import ReactStars from "react-stars";
 import api from "../../api/ApiFunction";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 function TeacherProfile() {
+  const navigate = useNavigate();
   const { teacherId } = useParams();
   const [teacher, setTeacher] = useState({});
   const [reviews, setReviews] = useState([]);
-  console.log(localStorage.getItem("user"));
   const [comment, setComment] = React.useState({
     id_Teacher: teacherId,
-    id_Student: "",
+    id_Student: JSON.parse(localStorage.getItem("user")).id,
     raiting: 1,
     comment: "",
   });
@@ -34,10 +34,13 @@ function TeacherProfile() {
     getReviews();
   }, []);
   const handleSubmitComment = async () => {
+    if (localStorage.getItem("user") === null) {
+      navigate("/login");
+    }
     await api.createRaiting(comment);
     setComment({
       id_Teacher: teacherId,
-      id_Student: "",
+      id_Student: JSON.parse(localStorage.getItem("user")).id,
       raiting: 1,
       comment: "",
     });

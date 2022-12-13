@@ -1,13 +1,18 @@
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FcSearch } from "react-icons/fc";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./headerPage.css";
 function HeaderPage() {
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/login");
+  };
   return (
     <Navbar className="Navbar" bg="light" expand="lg" fixed="top">
       <Container fluid>
@@ -23,18 +28,36 @@ function HeaderPage() {
             </NavLink>
           </Nav>
           <Nav>
-            <Button className="btn" variant="outline-primary">
-              <NavLink to="signup" className="nav-link  " id="signup">
-                {" "}
-                Sign up
-              </NavLink>
-            </Button>
-            <Button className="btn" variant="outline-primary">
-              <NavLink to="login" className="nav-link " id="login">
-                {" "}
-                Log in
-              </NavLink>
-            </Button>
+            {!user ? (
+              <>
+                <Button className="btn" variant="outline-primary">
+                  <NavLink to="signup" className="nav-link  " id="signup">
+                    {" "}
+                    Sign up
+                  </NavLink>
+                </Button>
+                <Button className="btn" variant="outline-primary">
+                  <NavLink to="login" className="nav-link " id="login">
+                    {" "}
+                    Log in
+                  </NavLink>
+                </Button>
+              </>
+            ) : (
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <div>
+                  Welcome <strong>{user.username}</strong> ! {"  "}
+                </div>
+                <Button
+                  style={{ margin: 0 }}
+                  variant="outline-primary"
+                  onClick={handleLogout}
+                >
+                  {" "}
+                  Log out
+                </Button>
+              </div>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
