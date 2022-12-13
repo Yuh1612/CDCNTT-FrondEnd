@@ -14,22 +14,20 @@ function TeacherProfile() {
   const [teacher, setTeacher] = useState({});
   const [reviews, setReviews] = useState([]);
   const [comment, setComment] = React.useState({
-    id_Teacher: teacherId,
-    id_Student: JSON.parse(localStorage.getItem("user")).id,
-    raiting: 1,
+    idTeacher: Number(teacherId),
+    idStudent: "",
+    rating: 1,
     comment: "",
   });
-
+  const getTeacher = async () => {
+    const res = await api.getTeacher(teacherId);
+    setTeacher(res.teacher[0]);
+  };
+  const getReviews = async () => {
+    const res = await api.getRaitings(teacherId);
+    setReviews(res.ratings);
+  };
   useEffect(() => {
-    const getTeacher = async () => {
-      const res = await api.getTeacher(teacherId);
-      setTeacher(res.teacher[0]);
-    };
-    const getReviews = async () => {
-      const res = await api.getRaitings(teacherId);
-      setReviews(res.ratings);
-    };
-
     getTeacher();
     getReviews();
   }, []);
@@ -37,11 +35,12 @@ function TeacherProfile() {
     if (localStorage.getItem("user") === null) {
       navigate("/login");
     }
+    comment.idStudent = JSON.parse(localStorage.getItem("user")).id;
     await api.createRaiting(comment);
     setComment({
-      id_Teacher: teacherId,
-      id_Student: JSON.parse(localStorage.getItem("user")).id,
-      raiting: 1,
+      idTeacher: Number(teacherId),
+      idStudent: JSON.parse(localStorage.getItem("user")).id,
+      rating: 1,
       comment: "",
     });
   };
@@ -49,11 +48,7 @@ function TeacherProfile() {
     <div>
       <div className="test">
         <div className="container">
-          <Image
-            src="https://avatars.preply.com/i/logos/i/logos/avatar_o3nwt6e7s68.jpg?d=160x160&f=webp"
-            className="img"
-            width={220}
-          ></Image>
+          <Image src={teacher.photo} className="img" width={220}></Image>
           <h2>
             {teacher.lastName} {teacher.firstName}
           </h2>
@@ -160,9 +155,9 @@ function TeacherProfile() {
         <ReactStars
           count={5}
           size={30}
-          value={comment.raiting}
+          value={comment.rating}
           color2={"#ffd700"}
-          onChange={(e) => setComment({ ...comment, raiting: e })}
+          onChange={(e) => setComment({ ...comment, rating: e })}
         />
         <input
           type="search"

@@ -11,10 +11,7 @@ function ListTeacher(availableTeachers) {
             <ListGroup.Item as="li">
               <div className="row" id="RowListGroupItem">
                 <div className="col-3">
-                  <img
-                    alt=""
-                    src="https://avatars.preply.com/i/logos/i/logos/avatar_o3nwt6e7s68.jpg?d=160x160&f=webp"
-                  ></img>
+                  <img alt="" src={teacher.photo}></img>
                 </div>
                 <div className="col-6">
                   <h4>

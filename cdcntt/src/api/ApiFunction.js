@@ -5,9 +5,7 @@ const api = {
     return await apiConfig.get(`/ratings?teacherId=${teacherId}`);
   },
   async createRaiting(data) {
-    return await apiConfig.post("/ratings", {
-      data,
-    });
+    return await apiConfig.post("/ratings", data);
   },
   async createTeacher(
     username,
@@ -24,10 +22,10 @@ const api = {
     return await apiConfig.post("/teachers", {
       username: username,
       password: password,
-      firstname: firstname,
-      lastname: lastname,
-      photo: photo,
+      firstName: firstname,
+      lastName: lastname,
       phone: phone,
+      photo: photo,
       address: address,
       experience: experience,
       degree: degree,
@@ -38,8 +36,8 @@ const api = {
     return await apiConfig.post("/students", {
       username: username,
       password: password,
-      firstname: firstname,
-      lastname: lastname,
+      firstName: firstname,
+      lastName: lastname,
       phone: phone,
     });
   },
