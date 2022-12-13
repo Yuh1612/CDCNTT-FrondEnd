@@ -61,6 +61,9 @@ const api = {
   async getTeacher(teacherId) {
     return await apiConfig.get(`/teachers/${teacherId}`);
   },
+  async searchTeacher(teacherName) {
+    return await apiConfig.get(`/search-teachers?name=${teacherName}`);
+  },
 };
 
 export default api;
