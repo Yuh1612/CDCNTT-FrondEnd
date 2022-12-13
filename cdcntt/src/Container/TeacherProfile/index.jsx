@@ -12,8 +12,9 @@ function TeacherProfile() {
   const { teacherId } = useParams();
   const [teacher, setTeacher] = useState({});
   const [reviews, setReviews] = useState([]);
+  console.log(localStorage.getItem("user"));
   const [comment, setComment] = React.useState({
-    id_Teacher: "",
+    id_Teacher: teacherId,
     id_Student: "",
     raiting: 1,
     comment: "",
@@ -33,10 +34,9 @@ function TeacherProfile() {
     getReviews();
   }, []);
   const handleSubmitComment = async () => {
-    console.log("comment", comment);
     await api.createRaiting(comment);
     setComment({
-      id_Teacher: "",
+      id_Teacher: teacherId,
       id_Student: "",
       raiting: 1,
       comment: "",
