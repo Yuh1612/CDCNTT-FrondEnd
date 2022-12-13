@@ -6,6 +6,7 @@
   background-color: white !important;
   border-radius: 30px !important;
   padding: 20px !important ;
+  margin-bottom: 10px 0 !important;
 }
 div > img {
   float: left;
