@@ -2,22 +2,26 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import { FcBusinesswoman, FcReading } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
 import api from "../../api/ApiFunction";
 import ListTeacher from "../../component/ListGroup";
 import TopTeacher from "../../component/TopTeacher";
 import "./homePage.css";
 function HomePage() {
+  const navigate = useNavigate();
   const [teachers, setTeachers] = useState([]);
+  const [search, setSearch] = useState("");
+
   const [availableTeachers, setAvailableTeachers] = useState([]);
   useEffect(() => {
     const getTeachers = async () => {
       const res = await api.getTeachers();
-      setTeachers(res.data);
-      if (res.data.length > 3) {
-        setAvailableTeachers(res.data.slice(0, 3));
+      setAvailableTeachers(res.records);
+      if (res.records.length > 3) {
+        setTeachers(res.records.slice(0, 3));
         return;
       }
-      setAvailableTeachers(res.data);
+      setTeachers(res.records);
     };
     getTeachers();
   }, []);
@@ -45,8 +49,9 @@ function HomePage() {
             placeholder="Search"
             className="me-2"
             aria-label="Search"
+            onChange={(e) => setSearch(e.target.value)}
           />
-          <Button className="btn_search" variant="outline-success">
+          <Button className="btn_search" variant="outline-success" onClick={(e) => navigate(`/search/${search}`)}>
             Search
           </Button>
         </Form>
@@ -69,7 +74,7 @@ function HomePage() {
         </span>
         <div className="col-2"></div>
         <div className="col-8">
-          <TopTeacher />
+          <TopTeacher teachers={teachers} />
         </div>
         <div className="col-2"></div>
       </div>

@@ -22,8 +22,8 @@ function LogIn() {
     }
     if (isTeacher === "true") {
       api.loginWithTeacher(username, password).then((res) => {
-        console.log(res);
         if (res.errCode === 0) {
+          localStorage.setItem("user", JSON.stringify(res.user));
           navigate("/");
         } else {
           setError("Wrong username or password");
@@ -32,6 +32,8 @@ function LogIn() {
     } else {
       api.loginWithStudent(username, password).then((res) => {
         if (res.errCode === 0) {
+          localStorage.setItem("user", JSON.stringify(res.user));
+
           navigate("/");
         } else {
           setError("Wrong username or password");

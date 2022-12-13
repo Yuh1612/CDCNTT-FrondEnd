@@ -11,6 +11,7 @@ import SignUp from "./Container/SignUp";
 import UserProfile from "./Container/UserProfile";
 import SavedTeacher from "./component/SavedTeacher";
 import TeacherProfile from "./Container/TeacherProfile";
+import Search from "./Container/Search";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -20,9 +21,11 @@ root.render(
           <Route index element={<HomePage />} />
           <Route path="login" element={<LogIn />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="search/:query" element={<Search />} />
+
           <Route path="userprofile" element={<UserProfile />} />
           <Route path="savedteacher" element={<SavedTeacher />} />
-          <Route path="teacherprofile" element={<TeacherProfile />} />
+          <Route path="teacher/:teacherId" element={<TeacherProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>
