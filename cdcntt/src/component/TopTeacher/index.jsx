@@ -7,7 +7,7 @@ export default function TopTeacher(teachers) {
   return (
     <>
       {teachers !== null &&
-        teachers.map((teacher, index) => {
+        teachers?.teachers?.map((teacher, index) => {
           <div className="TopTeacher">
             <img
               src="https://avatars.preply.com/i/logos/i/logos/avatar_jfuhkgwf9ho.jpg?d=160x160&f=webp"
