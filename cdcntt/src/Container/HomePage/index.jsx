@@ -12,12 +12,12 @@ function HomePage() {
   useEffect(() => {
     const getTeachers = async () => {
       const res = await api.getTeachers();
-      setTeachers(res.data);
-      if (res.data.length > 3) {
-        setAvailableTeachers(res.data.slice(0, 3));
+      setAvailableTeachers(res.records);
+      if (res.records.length > 3) {
+        setTeachers(res.records.slice(0, 3));
         return;
       }
-      setAvailableTeachers(res.data);
+      setTeachers(res.records);
     };
     getTeachers();
   }, []);

@@ -6,8 +6,8 @@ export default function TopTeacher(teachers) {
   console.log(teachers);
   return (
     <>
-      {teachers !== null &&
-        teachers?.teachers?.map((teacher, index) => {
+      {teachers?.teachers?.map((teacher, index) => {
+        return (
           <div className="TopTeacher">
             <img
               src="https://avatars.preply.com/i/logos/i/logos/avatar_jfuhkgwf9ho.jpg?d=160x160&f=webp"
@@ -15,11 +15,11 @@ export default function TopTeacher(teachers) {
               className="TopTeacherImg"
             />
             <h6>
-              $`{teacher.lastName} {teacher.firstName}`
+              {teacher.lastName} {teacher.firstName}
             </h6>
             <div className="Introduction">
               <AiFillStar className="Star" />
-              <p>5</p>
+              <p>{teacher.raiting}</p>
             </div>
             <p>Speak: English(native)</p>
             <Button>
@@ -28,8 +28,9 @@ export default function TopTeacher(teachers) {
                 View full details
               </NavLink>
             </Button>
-          </div>;
-        })}
+          </div>
+        );
+      })}
 
       {/* <div className="TopTeacher">
         <img
