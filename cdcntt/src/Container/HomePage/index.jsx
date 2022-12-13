@@ -69,7 +69,7 @@ function HomePage() {
         </span>
         <div className="col-2"></div>
         <div className="col-8">
-          <TopTeacher />
+          <TopTeacher teachers={teachers} />
         </div>
         <div className="col-2"></div>
       </div>
