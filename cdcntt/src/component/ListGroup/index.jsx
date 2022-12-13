@@ -20,16 +20,18 @@ function ListTeacher(availableTeachers) {
                   <h4>
                     {teacher.lastName} {teacher.firstName}
                   </h4>
+
                   <p>
-                    Friendly and calm tutor, certified, educated, and
-                    experienced Hi there! I'm Kathryn. I'm from the US, and I
-                    recently returned home from Thailand where I was teaching
-                    English to young learners. I have my master's degree in
-                    TESOL and over four years of teaching experience. Teaching
-                    is my passion! At this time, I am choosing to shift from
-                    classroom teaching to ... Why choose Kathryn L. "She is so
-                    nice and kind. When I speak something, she let me know
-                    correctly! "
+                    - <strong>Phone</strong>: {teacher.phone}
+                  </p>
+                  <p>
+                    - <strong>Experience</strong>: {teacher.experience} years
+                  </p>
+                  <p>
+                    - <strong>Degree</strong>: {teacher.dregree}
+                  </p>
+                  <p>
+                    - <strong>Address</strong>: {teacher.address}
                   </p>
                 </div>
                 <div className="col-3">

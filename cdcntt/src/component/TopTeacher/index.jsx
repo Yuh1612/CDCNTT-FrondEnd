@@ -19,7 +19,7 @@ export default function TopTeacher(teachers) {
             </h6>
             <div className="Introduction">
               <AiFillStar className="Star" />
-              <p>{teacher.raiting}</p>
+              <p>{teacher.rating}</p>
             </div>
             <p>Speak: English(native)</p>
             <Button>
