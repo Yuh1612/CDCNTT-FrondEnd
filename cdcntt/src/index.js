@@ -22,7 +22,7 @@ root.render(
           <Route path="signup" element={<SignUp />} />
           <Route path="userprofile" element={<UserProfile />} />
           <Route path="savedteacher" element={<SavedTeacher />} />
-          <Route path="teacherprofile" element={<TeacherProfile />} />
+          <Route path="teacher/:teacherId" element={<TeacherProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>

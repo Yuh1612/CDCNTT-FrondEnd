@@ -36,7 +36,10 @@ function ListTeacher(availableTeachers) {
                 </div>
                 <div className="col-3">
                   <Button>
-                    <NavLink to="teacherprofile" className="nav-link  ">
+                    <NavLink
+                      to={`teacher/${teacher.id}`}
+                      className="nav-link  "
+                    >
                       {" "}
                       View full details
                     </NavLink>

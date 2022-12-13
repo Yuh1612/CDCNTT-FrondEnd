@@ -2,11 +2,11 @@ import apiConfig from "./ApiConfig";
 
 const api = {
   async getRaitings(teacherId) {
-    return await apiConfig.get("/raitings", teacherId);
+    return await apiConfig.get(`/ratings?teacherId=${teacherId}`);
   },
   async createRaiting(data) {
     return await apiConfig.post("/ratings", {
-     data
+      data,
     });
   },
   async createTeacher(
@@ -57,6 +57,9 @@ const api = {
   },
   async getTeachers() {
     return await apiConfig.get("/teachers");
+  },
+  async getTeacher(teacherId) {
+    return await apiConfig.get(`/teachers/${teacherId}`);
   },
 };
 
