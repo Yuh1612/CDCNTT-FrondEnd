@@ -15,7 +15,7 @@ function TeacherProfile() {
   const [reviews, setReviews] = useState([]);
   const [comment, setComment] = React.useState({
     id_Teacher: teacherId,
-    id_Student: JSON.parse(localStorage.getItem("user")).id,
+    id_Student: "",
     raiting: 1,
     comment: "",
   });
@@ -37,6 +37,7 @@ function TeacherProfile() {
     if (localStorage.getItem("user") === null) {
       navigate("/login");
     }
+    comment.id_Student = JSON.parse(localStorage.getItem("user")).id;
     await api.createRaiting(comment);
     setComment({
       id_Teacher: teacherId,
