@@ -35,7 +35,7 @@ function SignUp() {
     } else {
       console.log(role);
 
-      await api.createStudent(username, password, firstname, lastname, phone);
+      await api.createStudent(username, password, firstname, lastname);
     }
   };
 
